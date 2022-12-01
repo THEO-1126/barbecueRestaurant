@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @Author 钟荣钊
+ * @Date 2022/12/02
+ * @Version 1.0
+ */
 public class UserDaoImpl implements UserDao {
     @Override
     public List<Users> getAllUser() throws SQLException, IOException {

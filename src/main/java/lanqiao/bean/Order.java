@@ -1,5 +1,10 @@
 package lanqiao.bean;
 
+/**
+ * @Author 钟荣钊
+ * @Date 2022/12/02
+ * @Version 1.0
+ */
 public class Order {
     private int OrderId;
     private String commodity;

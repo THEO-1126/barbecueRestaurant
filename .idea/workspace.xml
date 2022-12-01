@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cf12e36-92ae-457c-b2b1-e0ae314972bf" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Commodity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/connection/Conn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/UI/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Commodity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/connection/Conn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/connection/Conn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +51,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/大三/图片app备份" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1128" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -120,8 +121,16 @@
       <option name="presentableId" value="Default" />
       <updated>1669794247778</updated>
       <workItem from="1669794249548" duration="3063000" />
-      <workItem from="1669903753779" duration="7075000" />
+      <workItem from="1669903753779" duration="9657000" />
     </task>
+    <task id="LOCAL-00001" summary="构建基本框架">
+      <created>1669910945223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669910945223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +146,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="构建基本框架" />
+    <option name="LAST_COMMIT_MESSAGE" value="构建基本框架" />
   </component>
 </project>
