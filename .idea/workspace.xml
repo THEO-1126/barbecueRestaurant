@@ -4,18 +4,193 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cf12e36-92ae-457c-b2b1-e0ae314972bf" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/UI/Test.java" afterDir="false" />
+    <list default="true" id="3cf12e36-92ae-457c-b2b1-e0ae314972bf" name="变更" comment="点餐界面和功能增加">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/PayOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/ui/CommodityPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/ui/InventoryPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/ui/PurchasePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/ui/StatsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/ui/UserPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lanqiao/ui/newMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/WxpaydemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/pay/MyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/pay/WXPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/IWXPayDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPayConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPayReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPayRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPayUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/sdk/WXPayXmlUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wxpaydemo/util/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Assna.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tableTest/JTableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Commodity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/bean/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/connection/Conn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/connection/Conn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/CommodityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/CommodityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/CommodityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/CommodityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/dao/impl/OrderDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/CommodityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/CommodityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/CommodityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/CommodityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lanqiao/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/ui/OderUi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lanqiao/ui/impl/OrderUiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/OrderMainUi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/SkewersPic/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/drinkPic/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/OderfoodPic/staplefoodPic/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/OrderUiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/OrderUiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/SkewersPic/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/drinkPic/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OderfoodPic/staplefoodPic/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/bean/Commodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/bean/Commodity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/bean/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/bean/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/bean/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/bean/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/connection/Conn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/connection/Conn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/dao/CommodityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/dao/CommodityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/dao/OrderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/dao/impl/CommodityDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/dao/impl/CommodityDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/dao/impl/OrderDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/dao/impl/OrderDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/service/CommodityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/service/CommodityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/service/impl/CommodityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/service/impl/CommodityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/service/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lanqiao/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/OderUi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lanqiao/ui/impl/OrderUiImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/OrderUiImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/PicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/PicTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,46 +206,80 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../蓝桥杯/idea破解版/apache-maven-3.8.4" />
-        <option name="userSettingsFile" value="F:\蓝桥杯\idea破解版\apache-maven-3.8.4\conf\settings.xml" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Java/repository/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="D:\program\Java\repository\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="3" />
+  </component>
   <component name="ProjectId" id="2IG3lZORCltfOt1wlyL8usdbKmx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1128" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/wxpaydemo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\program\LanqiaoProgram\barbecueRestaurant\src\main\java\wxpaydemo" />
+      <recent name="D:\program\LanqiaoProgram\barbecueRestaurant\src\main\java" />
+      <recent name="D:\program\LanqiaoProgram\barbecueRestaurant\src\main\java\lanqiao\ui" />
+      <recent name="D:\program\LanqiaoProgram\barbecueRestaurant\src\test" />
+      <recent name="D:\program\LanqiaoProgram\barbecueRestaurant\src\test\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\program\LanqiaoProgram\barbecueRestaurant\src\main\resources" />
       <recent name="F:\Project\barbecueRestaurant\src\main\resources" />
       <recent name="F:\Project\barbecueRestaurant\src\main\java" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
   </component>
-  <component name="RunManager" selected="应用程序.UserServiceImpl">
-    <configuration name="Conn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lanqiao.connection.Conn" />
+  <component name="RunManager" selected="Spring Boot.WxpaydemoApplication">
+    <configuration name="MainWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lanqiao.ui.newUi.MainWindow" />
       <module name="barbecueRestaurant" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lanqiao.connection.*" />
+          <option name="PATTERN" value="lanqiao.ui.newUi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +287,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lanqiao.dao.impl.UserDaoImpl" />
+    <configuration name="OrderUi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lanqiao.ui.OrderUi.OrderUi" />
       <module name="barbecueRestaurant" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lanqiao.dao.impl.*" />
+          <option name="PATTERN" value="lanqiao.ui.newUi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,24 +300,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lanqiao.service.impl.UserServiceImpl" />
+    <configuration name="newMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lanqiao.ui.Ui.newMain" />
       <module name="barbecueRestaurant" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lanqiao.service.impl.*" />
+          <option name="PATTERN" value="lanqiao.ui.Ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="newMain (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lanqiao.ui.newMain" />
+      <module name="barbecueRestaurant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lanqiao.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="newMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lanqiao.ui.newUi.newMain" />
+      <module name="barbecueRestaurant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lanqiao.ui.newUi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WxpaydemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="barbecueRestaurant" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="wxpaydemo.WxpaydemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.UserServiceImpl" />
-        <item itemvalue="应用程序.UserDaoImpl" />
-        <item itemvalue="应用程序.Conn" />
+        <item itemvalue="应用程序.newMain (2)" />
+        <item itemvalue="应用程序.newMain (1)" />
+        <item itemvalue="应用程序.OrderUi" />
+        <item itemvalue="应用程序.newMain" />
+        <item itemvalue="应用程序.MainWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -122,6 +366,14 @@
       <updated>1669794247778</updated>
       <workItem from="1669794249548" duration="3063000" />
       <workItem from="1669903753779" duration="9657000" />
+      <workItem from="1670051885825" duration="2753000" />
+      <workItem from="1670062019032" duration="104000" />
+      <workItem from="1670067984158" duration="17046000" />
+      <workItem from="1670117202805" duration="15447000" />
+      <workItem from="1670132799474" duration="28813000" />
+      <workItem from="1670202421018" duration="1109000" />
+      <workItem from="1670228064915" duration="9023000" />
+      <workItem from="1670242660006" duration="4521000" />
     </task>
     <task id="LOCAL-00001" summary="构建基本框架">
       <created>1669910945223</created>
@@ -130,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669910945223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="点餐界面和功能增加">
+      <created>1670048924815</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670048924815</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,9 +405,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="构建基本框架" />
-    <option name="LAST_COMMIT_MESSAGE" value="构建基本框架" />
+    <MESSAGE value="点餐界面和功能增加" />
+    <option name="LAST_COMMIT_MESSAGE" value="点餐界面和功能增加" />
   </component>
 </project>

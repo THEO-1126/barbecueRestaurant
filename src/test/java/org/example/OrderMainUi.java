@@ -27,13 +27,13 @@
 //import java.util.concurrent.atomic.AtomicInteger;
 //
 ///**
-// * @Author Àî±ù±ù
+// * @Author æå†°å†°
 // * @Date 2022/12/02
 // * @Version 17.0.5
-// * µã²Í½çÃæ
+// * ç‚¹é¤ç•Œé¢
 // */
 //
-//public class OrderUiImpl extends JFrame implements CommodityService{
+//public class OrderMainUi extends JFrame implements CommodityService{
 //    CommodityService commodityService = new CommodityServiceImpl();
 //    JPanel currentcenterPanel;
 //    JLabel []SkewersLabels;
@@ -44,23 +44,23 @@
 //    int currentstaplefoodI=-1;
 //    int DrinkNumber,SkewersNumber,staplefoodNumber;
 //    Object [][]DrinksData,staplefoodData,SkerwersData;
-//    DefaultTableModel tableModel;//±í¸ñÄ£ĞÍ
+//    DefaultTableModel tableModel;//è¡¨æ ¼æ¨¡å‹
 //    JTable jTable;
-//    JLabel totalPriceLable;// ´æ·Å¼Û¸ñµÄ±êÇ©
-//    int dinersNumber;//ÓÃ²ÍÈËÊı
-//    JTextField numberField;//´æ·ÅÓÃ²ÍÈËÊı
-//    // ²âÊÔÔËĞĞ
+//    JLabel totalPriceLable;// å­˜æ”¾ä»·æ ¼çš„æ ‡ç­¾
+//    int dinersNumber;//ç”¨é¤äººæ•°
+//    JTextField numberField;//å­˜æ”¾ç”¨é¤äººæ•°
+//    // æµ‹è¯•è¿è¡Œ
 //    public static void main(String[] args) {
 //        EventQueue.invokeLater(() -> {
 //            try {
-//                OrderUiImpl oui=new OrderUiImpl();
+//                OrderMainUi oui=new OrderMainUi();
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
 //        });
 //    }
 //    String getPicAdress(String objectName){
-//        //¶ÁÅäÖÃÎÄ¼ş
+//        //è¯»é…ç½®æ–‡ä»¶
 //        InputStream inputStream = Conn.class.getClassLoader().getResourceAsStream("config.properties");
 //        Properties properties = new Properties();
 //        try {
@@ -74,7 +74,7 @@
 //        String bucketName =properties.getProperty("bucketName");
 //        String endpoint = properties.getProperty("endpoint");
 //        OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
-//        // Ö¸¶¨Ç©ÃûURL¹ıÆÚÊ±¼äÎª10·ÖÖÓ¡£
+//        // æŒ‡å®šç­¾åURLè¿‡æœŸæ—¶é—´ä¸º10åˆ†é’Ÿã€‚
 //        Date expiration = new Date(new Date().getTime() + 1000 * 60 * 100 );
 //        GeneratePresignedUrlRequest req = new GeneratePresignedUrlRequest(bucketName, objectName, HttpMethod.GET);
 //        req.setExpiration(expiration);
@@ -83,37 +83,37 @@
 //    };
 //
 //    public int getDrinkNumber() throws SQLException{
-//        return commodityService.getSortNumber("ÒûÆ·");
+//        return commodityService.getSortNumber("é¥®å“");
 //    }
 //    public int getstaplefoodNumber() throws SQLException{
-//        return commodityService.getSortNumber("Ö÷Ê³");
+//        return commodityService.getSortNumber("ä¸»é£Ÿ");
 //    }
 //    public int getSkewersumber() throws SQLException{
-//        return commodityService.getSortNumber("¿¾´®");
+//        return commodityService.getSortNumber("çƒ¤ä¸²");
 //    }
 //    public Object[][] getDrinksData() throws SQLException{
-//        return commodityService.getSortpicAdress("ÒûÆ·");
+//        return commodityService.getSortpicAdress("é¥®å“");
 //    }
 //    public Object[][] getstaplefoodData() throws SQLException{
-//        return commodityService.getSortpicAdress("Ö÷Ê³");
+//        return commodityService.getSortpicAdress("ä¸»é£Ÿ");
 //    }
 //    public Object[][] getSkerwersData() throws SQLException{
-//        return commodityService.getSortpicAdress("¿¾´®");
+//        return commodityService.getSortpicAdress("çƒ¤ä¸²");
 //    }
 //
-//    public OrderUiImpl() throws SQLException{
+//    public OrderMainUi() throws SQLException{
 //        OrderFood();
 //    }
 //
 //    public void OrderFood() throws SQLException{
-//        /* ÉèÖÃ±êÌâºÍÍ¼±ê */
-//        setTitle("µã²Í");
+//        /* è®¾ç½®æ ‡é¢˜å’Œå›¾æ ‡ */
+//        setTitle("ç‚¹é¤");
 //        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        setMinimumSize(new Dimension(1305,680));
 //        setLocationRelativeTo(null);
 //        setVisible(true);
 //
-//        /* ×óÖĞÓÒÏÂÃæ°å BorderLayout²¼¾Ö */
+//        /* å·¦ä¸­å³ä¸‹é¢æ¿ BorderLayoutå¸ƒå±€ */
 //        Container parentJPanel = getContentPane();
 //        parentJPanel.setLayout(new BorderLayout(10, 10));
 //        JPanel rightPanel = new JPanel();
@@ -126,48 +126,48 @@
 //        parentJPanel.add(rightPanel, BorderLayout.EAST);
 //
 //        /*
-//            Àà±ğµ¼º½Ãæ°å ×ó±ß GridLayout²¼¾Ö
+//            ç±»åˆ«å¯¼èˆªé¢æ¿ å·¦è¾¹ GridLayoutå¸ƒå±€
 //         */
 //        leftPanel.setLayout(new GridLayout(10, 1, 5, 5));
 //        leftPanel.setPreferredSize(new Dimension(100, 150));
-//        JButton skewersBtn = new JButton("¿¾´®");
-//        JButton stapleFoodBtn = new JButton("Ö÷Ê³");
-//        JButton drinkBtn = new JButton("ÒûÆ·");
+//        JButton skewersBtn = new JButton("çƒ¤ä¸²");
+//        JButton stapleFoodBtn = new JButton("ä¸»é£Ÿ");
+//        JButton drinkBtn = new JButton("é¥®å“");
 //        drinkBtn.setBounds(new Rectangle(100, 50));
 //        leftPanel.setBorder(BorderFactory.createTitledBorder(
-//                BorderFactory.createLineBorder(Color.CYAN, 3), "²Ëµ¥µ¼º½",
-//                TitledBorder.CENTER, TitledBorder.TOP, new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 15)));
+//                BorderFactory.createLineBorder(Color.CYAN, 3), "èœå•å¯¼èˆª",
+//                TitledBorder.CENTER, TitledBorder.TOP, new Font("å¾®è½¯é›…é»‘", Font.BOLD, 15)));
 //        leftPanel.add(skewersBtn);
 //        leftPanel.add(stapleFoodBtn);
 //        leftPanel.add(drinkBtn);
 //
 //        /*
-//          ²ËÊ½Ãæ°å ÖĞ¼ä FlowLayout²¼¾Ö
+//          èœå¼é¢æ¿ ä¸­é—´ FlowLayoutå¸ƒå±€
 //        */
 //        currentcenterPanel=new JPanel(new BorderLayout());
 //        currentcenterPanel.setSize(400,400);
 //        JLabel lable1=new JLabel("Welcome to the Barbecue Restaurant");
 //        JLabel lable2=new JLabel("Please click on the menu navigation if you want to order");
-//        lable1.setFont(new Font("Î¢ÈíÑÅºÚ",Font.BOLD,30));
-//        lable2.setFont(new Font("Î¢ÈíÑÅºÚ",Font.BOLD,20));
+//        lable1.setFont(new Font("å¾®è½¯é›…é»‘",Font.BOLD,30));
+//        lable2.setFont(new Font("å¾®è½¯é›…é»‘",Font.BOLD,20));
 //        currentcenterPanel.setBackground(Color.CYAN);
 //        currentcenterPanel.add(lable1,BorderLayout.CENTER);
 //        currentcenterPanel.add(lable2,BorderLayout.SOUTH);
 //
 //        currentcenterPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 1, 5));
 //        jscrollpane.setViewportView(currentcenterPanel);
-//        jscrollpane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);  //ÉèÖÃ´¹Ö±¹ö¶¯ÌõÔÚ´°¸ñÉÏ
-//        jscrollpane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER); // ²»ÉèÖÃË®Æ½¹ö¶¯Ìõ
+//        jscrollpane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);  //è®¾ç½®å‚ç›´æ»šåŠ¨æ¡åœ¨çª—æ ¼ä¸Š
+//        jscrollpane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER); // ä¸è®¾ç½®æ°´å¹³æ»šåŠ¨æ¡
 //
-//        /* ¸ø²ËÊ½µ¼º½ÉÏµÄ°´Å¥°ó¶¨ÊÂ¼ş */
-//        AtomicInteger currentNumber= new AtomicInteger(); // µ±Ç°Í¼Æ¬ÊıÁ¿
-//        // ¿¾´®°´Å¥
+//        /* ç»™èœå¼å¯¼èˆªä¸Šçš„æŒ‰é’®ç»‘å®šäº‹ä»¶ */
+//        AtomicInteger currentNumber= new AtomicInteger(); // å½“å‰å›¾ç‰‡æ•°é‡
+//        // çƒ¤ä¸²æŒ‰é’®
 //        skewersBtn.addActionListener(
 //                e->{
 //                    try {
 //                        currentcenterPanel=getSkewersPanel();
 //                        jscrollpane.setViewportView(currentcenterPanel);
-//                        int jscrollpaneWidth=jscrollpane.getWidth();// »ñÈ¡0µ±Ç°jscrollpaneµÄ¿í¶È
+//                        int jscrollpaneWidth=jscrollpane.getWidth();// è·å–0å½“å‰jscrollpaneçš„å®½åº¦
 //                        int imgHeight=230;
 //                        currentNumber.set(getSkewersumber());
 //                        int panelHeight=setCenterPanelHeight(jscrollpaneWidth,currentNumber.get(),imgHeight);
@@ -177,13 +177,13 @@
 //                    }
 //                }
 //        );
-//        // Ö÷Ê³°´Å¥
+//        // ä¸»é£ŸæŒ‰é’®
 //        stapleFoodBtn.addActionListener(
 //                e->{
 //                    try {
 //                        currentcenterPanel=getstaplefoodPanel();
 //                        jscrollpane.setViewportView(currentcenterPanel);
-//                        int jscrollpaneWidth=jscrollpane.getWidth();// »ñÈ¡µ±Ç°jscrollpaneµÄ¿í¶È
+//                        int jscrollpaneWidth=jscrollpane.getWidth();// è·å–å½“å‰jscrollpaneçš„å®½åº¦
 //                        int imgHeight=230;
 //                        currentNumber.set(getstaplefoodNumber());
 //                        int panelHeight=setCenterPanelHeight(jscrollpaneWidth,currentNumber.get(),imgHeight);
@@ -193,13 +193,13 @@
 //                    }
 //                }
 //        );
-//        // ÒûÆ·°´Å¥
+//        // é¥®å“æŒ‰é’®
 //        drinkBtn.addActionListener(
 //                e-> {
 //                    try {
 //                        currentcenterPanel = getDrinkPanel();
 //                        jscrollpane.setViewportView(currentcenterPanel);
-//                        int jscrollpaneWidth=jscrollpane.getWidth();// »ñÈ¡µ±Ç°jscrollpaneµÄ¿í¶È
+//                        int jscrollpaneWidth=jscrollpane.getWidth();// è·å–å½“å‰jscrollpaneçš„å®½åº¦
 //                        int imgHeight=230;
 //                        currentNumber.set(getDrinkNumber());
 //                        int panelHeight=setCenterPanelHeight(jscrollpaneWidth,currentNumber.get(),imgHeight);
@@ -209,11 +209,11 @@
 //                    }
 //                });
 //
-//        /* ´°¿Ú´óĞ¡¸Ä±ä ÉèÖÃ¼àÌıÊÂ¼ş */
+//        /* çª—å£å¤§å°æ”¹å˜ è®¾ç½®ç›‘å¬äº‹ä»¶ */
 //        addComponentListener(new ComponentAdapter() {
 //            @Override
 //            public void componentResized(ComponentEvent e) {
-//                int jscrollpaneWidth=jscrollpane.getWidth();// »ñÈ¡µ±Ç°jscrollpaneµÄ¿í¶È
+//                int jscrollpaneWidth=jscrollpane.getWidth();// è·å–å½“å‰jscrollpaneçš„å®½åº¦
 //                int imgHeight=230;
 //                int panelHeight=setCenterPanelHeight(jscrollpaneWidth,currentNumber.get(),imgHeight);
 //                currentcenterPanel.setPreferredSize(new Dimension(jscrollpane.getWidth(), panelHeight));
@@ -221,108 +221,116 @@
 //        });
 //
 //        /*
-//            ÓÒ±ßÃæ°å BorderLayout²¼¾Ö
+//            å³è¾¹é¢æ¿ BorderLayoutå¸ƒå±€
 //        */
 //        rightPanel.setPreferredSize(new Dimension(300, 700));
 //        rightPanel.setLayout(new BorderLayout(0,2));
-//        JPanel panel1=new JPanel();// ·Å Ñ¡²Í×ÀºÍÈËÊı µÄÃæ°å
+//        JPanel panel1=new JPanel();// æ”¾ é€‰é¤æ¡Œå’Œäººæ•° çš„é¢æ¿
 //        rightPanel.add(panel1,BorderLayout.NORTH);
-//        JPanel panel2=new JPanel();// ÒÑµã²ËÊ½Ãæ°å µÄÃæ°å
+//        JPanel panel2=new JPanel();// å·²ç‚¹èœå¼é¢æ¿ çš„é¢æ¿
 //        rightPanel.add(panel2,BorderLayout.CENTER);
 //
-//        /* Ñ¡²Í×ÀºÍÈËÊıµÄÃæ°å GridLayout ²¼¾Ö */
+//        /* é€‰é¤æ¡Œå’Œäººæ•°çš„é¢æ¿ GridLayout å¸ƒå±€ */
 //        panel1.setPreferredSize(new Dimension(300, 100));
 //        panel1.setLayout(new GridLayout(2,2));
-//        // ×ÀºÅºÍÏÂÀ­¿ò
-//        JLabel tableNoLable=new JLabel("ÇëÑ¡Ôñ×ÀºÅ£º");
-//        JComboBox comboBox = new JComboBox();// ÏÂÀ­¿ò
-//        String[] tableNos = { "1ºÅ×À", "2ºÅ×À", "3ºÅ×À" };
+//        // æ¡Œå·å’Œä¸‹æ‹‰æ¡†
+//        JLabel tableNoLable=new JLabel("è¯·é€‰æ‹©æ¡Œå·ï¼š");
+//        JComboBox comboBox = new JComboBox();// ä¸‹æ‹‰æ¡†
+//        String[] tableNos = { "1å·æ¡Œ", "2å·æ¡Œ", "3å·æ¡Œ" };
 //        for (String item : tableNos){
 //            comboBox.addItem(item);
 //        }
 //        panel1.add(tableNoLable);
 //        panel1.add(comboBox);
-//        // ÓÃ²ÍÈËÊıºÍÊäÈë¿ò
-//        JLabel numberLable=new JLabel("ÇëÊäÈëÓÃ²ÍÈËÊı: ");
+//        // ç”¨é¤äººæ•°å’Œè¾“å…¥æ¡†
+//        JLabel numberLable=new JLabel("è¯·è¾“å…¥ç”¨é¤äººæ•°: ");
 //        numberField=new JTextField();
 //        panel1.add(numberLable);
 //        panel1.add(numberField);
 //
-//        /* ÒÑµã²ËÊ½Ãæ°å  BorderLayout²¼¾Ö */
+//        /* å·²ç‚¹èœå¼é¢æ¿  BorderLayoutå¸ƒå±€ */
 //        panel2.setLayout(new BorderLayout(0,2));
 //        panel2.setMinimumSize(new Dimension(300, 400));
-//        // ÒÑµã²Ëµ¥ÁĞ±í
-//        JLabel listLable=new JLabel("ÒÑµã²ËÊ½ÁĞ±í: ");
+//        // å·²ç‚¹èœå•åˆ—è¡¨
+//        JLabel listLable=new JLabel("å·²ç‚¹èœå¼åˆ—è¡¨: ");
 //        listLable.setMinimumSize(new Dimension(300,50));
 //        panel2.add(listLable,BorderLayout.NORTH);
-//        // ²ËÊ½±í¸ñ
-//        String head[] = {"²ËÃû", "µ¥¼Û", "ÊıÁ¿"};
+//        // èœå¼è¡¨æ ¼
+//        String head[] = {"èœå", "å•ä»·", "æ•°é‡"};
 //        Object[][] data = new Object[0][0];
 //        tableModel = new DefaultTableModel(data, head);
-//        JScrollPane jscrollPaneList = new JScrollPane(); // ¹ö¶¯Ãæ°å
+//        JScrollPane jscrollPaneList = new JScrollPane(); // æ»šåŠ¨é¢æ¿
 //        jTable=new JTable(tableModel);
 //        jscrollPaneList.setViewportView(jTable);
 //        jscrollPaneList.setMinimumSize(new Dimension(300,200));
 //        panel2.add(jscrollPaneList,BorderLayout.CENTER);
 //
-//        /* ±í¸ñÄÚÈİĞŞ¸Ä¼àÌı */
+//        /* è¡¨æ ¼å†…å®¹ä¿®æ”¹ç›‘å¬ */
 //        tableModel.addTableModelListener(new TableModelListener() {
 //            @Override
 //            public void tableChanged(TableModelEvent e) {
-//                totalPriceLable.setText("ºÏ¼Æ : "+getTotalPrice()+"Ôª");//¸üĞÂºÏ¼Æ¼Û¸ñ
+//                totalPriceLable.setText("åˆè®¡ : "+getTotalPrice()+"å…ƒ");//æ›´æ–°åˆè®¡ä»·æ ¼
 //            }
 //        });
 //
 //
-//        /* ÓÒÃæ°åµÄÉ¾³ı°´Å¥*/
+//        /* å³é¢æ¿çš„åˆ é™¤æŒ‰é’®*/
 //        JPanel panel3=new JPanel(new GridLayout(1,2));
-//        JButton deleteBtn=new JButton("É¾³ı");
+//        JButton deleteBtn=new JButton("åˆ é™¤");
 //        panel3.add(deleteBtn);
 //        double totalPrice=getTotalPrice();
-//        totalPriceLable=new JLabel("ºÏ¼Æ : "+totalPrice+"Ôª",JLabel.CENTER);
+//        totalPriceLable=new JLabel("åˆè®¡ : "+totalPrice+"å…ƒ",JLabel.CENTER);
 //        panel3.add(totalPriceLable);
 //        rightPanel.add(panel3,BorderLayout.SOUTH);
 //        deleteBtn.addActionListener(new ActionListener(){
 //            @Override
 //            public void actionPerformed(ActionEvent e) {
 //                try {
-//                    tableModel.removeRow(jTable.getSelectedRow());//É¾³ıµ±Ç°ĞĞ
-//                    totalPriceLable.setText("ºÏ¼Æ : "+getTotalPrice()+"Ôª");
+//                    tableModel.removeRow(jTable.getSelectedRow());//åˆ é™¤å½“å‰è¡Œ
+//                    totalPriceLable.setText("åˆè®¡ : "+getTotalPrice()+"å…ƒ");
 //                } catch (ArrayIndexOutOfBoundsException e1){
-//                    JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÒ»ĞĞÊı¾İºóÔÙÉ¾³ı", "¾¯¸æ", JOptionPane.ERROR_MESSAGE);
+//                    JOptionPane.showMessageDialog(null, "è¯·é€‰æ‹©ä¸€è¡Œæ•°æ®åå†åˆ é™¤", "è­¦å‘Š", JOptionPane.ERROR_MESSAGE);
 //                }
 //            }
 //        });
 //
-//        /* É¾³ı°´Å¥°ó¶¨ÊÂ¼ş */
-//        /* µ×²¿°´Å¥ */
-//        String []btnName={"È¡Ïû","ÏÂµ¥","¼Ó²Í","½áÕË"};
-//        JButton bss[] = new JButton[4];
-//        for (int i = 0; i <4; i++) {
+//        /* åˆ é™¤æŒ‰é’®ç»‘å®šäº‹ä»¶ */
+//        /* åº•éƒ¨æŒ‰é’® */
+//        String []btnName={"å–æ¶ˆ","ä¸‹å•","ç»“è´¦"};
+//        JButton bss[] = new JButton[3];
+//        for (int i = 0; i <3; i++) {
 //            bss[i]=new JButton(btnName[i]);
 //            bottomPanel.add(bss[i]);
 //        }
-//        //ÏÂµ¥°´Å¥°ó¶¨ÊÂ¼ş
+//        // å–æ¶ˆæŒ‰é’®ç»‘å®šäº‹ä»¶ å…³é—­ç‚¹é¤ç•Œé¢
+//        bss[0].addActionListener(new ActionListener(){
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                dispose();
+//            }
+//        });
+//                //ä¸‹å•æŒ‰é’®ç»‘å®šäº‹ä»¶
 //        bss[1].addActionListener(new ActionListener() {
 //            @Override
 //            public void actionPerformed(ActionEvent e) {
 //                if(numberField.getText().isEmpty()){
-//                    JOptionPane.showMessageDialog(null, "ÇëÊäÈëÓÃ²ÍÈËÊı£¡", "¾¯¸æ", JOptionPane.ERROR_MESSAGE);
+//                    JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥ç”¨é¤äººæ•°ï¼", "è­¦å‘Š", JOptionPane.ERROR_MESSAGE);
 //                }else if(jTable.getRowCount()==0){
-//                    JOptionPane.showMessageDialog(null, "Äúµ±Ç°Î´µã²Í£¬Çëµã²ÍºóÔÙÏÂµ¥", "¾¯¸æ", JOptionPane.ERROR_MESSAGE);
+//                    JOptionPane.showMessageDialog(null, "æ‚¨å½“å‰æœªç‚¹é¤ï¼Œè¯·ç‚¹é¤åå†ä¸‹å•", "è­¦å‘Š", JOptionPane.ERROR_MESSAGE);
 //                } else{
-//                    JOptionPane.showMessageDialog(null, "ÏÂµ¥³É¹¦£¡ÇëÄÍĞÄµÈ´ı...", "ÌáĞÑ", JOptionPane.INFORMATION_MESSAGE);
+//                    JOptionPane.showMessageDialog(null, "ä¸‹å•æˆåŠŸï¼è¯·è€å¿ƒç­‰å¾…...", "æé†’", JOptionPane.INFORMATION_MESSAGE);
 //                }
 //            }
 //        });
 //
+//
 //    }
 //
-//    /* »ñÈ¡×Ü¼Û¸ñ */
+//    /* è·å–æ€»ä»·æ ¼ */
 //    public double getTotalPrice(){
-//        int row = jTable.getRowCount();       // ±í¸ñĞĞÊı
+//        int row = jTable.getRowCount();       // è¡¨æ ¼è¡Œæ•°
 //        double totalPrice=0;
-//        // valueÊı×é´æ·Å±í¸ñÖĞµÄËùÓĞÊı¾İ
+//        // valueæ•°ç»„å­˜æ”¾è¡¨æ ¼ä¸­çš„æ‰€æœ‰æ•°æ®
 //        Object[][] value = new Object[row][2];
 //        for(int i = 0; i < row; i++){
 //            double price = (double) jTable.getValueAt(i, 1);
@@ -332,7 +340,7 @@
 //        return totalPrice;
 //    }
 //
-//    /*   »ñÈ¡ ¿¾´®Ãæ°å */
+//    /*   è·å– çƒ¤ä¸²é¢æ¿ */
 //    public JPanel getSkewersPanel() throws SQLException {
 //        int SkewersNumber=getSkewersumber();
 //        Object [][]SkewersData=getSkerwersData();
@@ -346,8 +354,8 @@
 //            double price= (double) SkewersData[i][1];
 //            String picAdress= (String) SkewersData[i][2];
 //            iconType.setBorder (BorderFactory.createTitledBorder (
-//                    BorderFactory.createLineBorder (Color.CYAN,2),dishName+":"+price+"Ôª",
-//                    TitledBorder.CENTER,TitledBorder.TOP,new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 15)));
+//                    BorderFactory.createLineBorder (Color.CYAN,2),dishName+":"+price+"å…ƒ",
+//                    TitledBorder.CENTER,TitledBorder.TOP,new Font("å¾®è½¯é›…é»‘", Font.BOLD, 15)));
 //
 //            ImageIcon image= null;
 //            try {
@@ -359,7 +367,7 @@
 //            }
 //            SkewersPanel.add(iconType);
 //            Object[] selectedArr={dishName,price,1};
-//            // Ìí¼ÓÍ¼Æ¬±êÇ©µÄ¼àÌı
+//            // æ·»åŠ å›¾ç‰‡æ ‡ç­¾çš„ç›‘å¬
 //            SkewersLabels[i].addMouseListener(new MouseListener() {
 //                @Override
 //                public void mouseClicked(MouseEvent e) {
@@ -370,7 +378,7 @@
 //                    System.out.println(finalI);
 //                    currentSkewersLabelsI=finalI;
 //                    tableModel.addRow(selectedArr);
-//                    totalPriceLable.setText("ºÏ¼Æ : "+getTotalPrice()+"Ôª");//¸üĞÂºÏ¼Æ¼Û¸ñ
+//                    totalPriceLable.setText("åˆè®¡ : "+getTotalPrice()+"å…ƒ");//æ›´æ–°åˆè®¡ä»·æ ¼
 //                }
 //
 //                @Override
@@ -392,7 +400,7 @@
 //    }
 //
 //
-//    /* »ñÈ¡ÒûÆ·Ãæ°å */
+//    /* è·å–é¥®å“é¢æ¿ */
 //    public JPanel getDrinkPanel() throws SQLException{
 //        JPanel SkewersPanel=new JPanel();
 //        int DrinkNumber=getDrinkNumber();
@@ -405,8 +413,8 @@
 //            double price= (double) DrinksData[i][1];
 //            String picAdress= (String) DrinksData[i][2];
 //            iconType.setBorder (BorderFactory.createTitledBorder (
-//                    BorderFactory.createLineBorder (Color.CYAN,2),dishName+":"+price+"Ôª",
-//                    TitledBorder.CENTER,TitledBorder.TOP,new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 15)));
+//                    BorderFactory.createLineBorder (Color.CYAN,2),dishName+":"+price+"å…ƒ",
+//                    TitledBorder.CENTER,TitledBorder.TOP,new Font("å¾®è½¯é›…é»‘", Font.BOLD, 15)));
 //            ImageIcon image= null;
 //            try {
 //                image = new ImageIcon(new URL(getPicAdress(picAdress)));
@@ -416,7 +424,7 @@
 //                e.printStackTrace();
 //            }
 //            SkewersPanel.add(iconType);
-//            // Ìí¼ÓÍ¼Æ¬±êÇ©µÄ¼àÌı
+//            // æ·»åŠ å›¾ç‰‡æ ‡ç­¾çš„ç›‘å¬
 //            int finalI=i;
 //            Object[] selectedArr={dishName,price,1};
 //            DrinkLabels[i].addMouseListener(new MouseListener() {
@@ -429,7 +437,7 @@
 //                    System.out.println(finalI);
 //                    currentDrinkLabelsI=finalI;
 //                    tableModel.addRow(selectedArr);
-//                    totalPriceLable.setText("ºÏ¼Æ : "+getTotalPrice()+"Ôª");//¸üĞÂºÏ¼Æ¼Û¸ñ
+//                    totalPriceLable.setText("åˆè®¡ : "+getTotalPrice()+"å…ƒ");//æ›´æ–°åˆè®¡ä»·æ ¼
 //                }
 //
 //                @Override
@@ -450,7 +458,7 @@
 //        return SkewersPanel;
 //    }
 //
-//    /* »ñÈ¡Ö÷Ê³Ãæ°å */
+//    /* è·å–ä¸»é£Ÿé¢æ¿ */
 //    public JPanel getstaplefoodPanel() throws SQLException{
 //        JPanel staplefoodPanel=new JPanel();
 //        int staplefoodNumber=getstaplefoodNumber();
@@ -463,8 +471,8 @@
 //            double price= (double) staplefoodData[i][1];
 //            String picAdress= (String) staplefoodData[i][2];
 //            iconType.setBorder (BorderFactory.createTitledBorder (
-//                    BorderFactory.createLineBorder (Color.CYAN,2),dishName+":"+price+"Ôª",
-//                    TitledBorder.CENTER,TitledBorder.TOP,new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 15)));
+//                    BorderFactory.createLineBorder (Color.CYAN,2),dishName+":"+price+"å…ƒ",
+//                    TitledBorder.CENTER,TitledBorder.TOP,new Font("å¾®è½¯é›…é»‘", Font.BOLD, 15)));
 //            ImageIcon image= null;
 //            try {
 //                image = new ImageIcon(new URL(getPicAdress(picAdress)));
@@ -474,7 +482,7 @@
 //                e.printStackTrace();
 //            }
 //            staplefoodPanel.add(iconType);
-//            // Ìí¼ÓÍ¼Æ¬±êÇ©µÄ¼àÌı
+//            // æ·»åŠ å›¾ç‰‡æ ‡ç­¾çš„ç›‘å¬
 //            int finalI=i;
 //            Object[] selectedArr={dishName,price,1};
 //            staplefoodLabels[i].addMouseListener(new MouseListener() {
@@ -487,7 +495,7 @@
 //                    System.out.println(finalI);
 //                    currentstaplefoodI=finalI;
 //                    tableModel.addRow(selectedArr);
-//                    totalPriceLable.setText("ºÏ¼Æ : "+getTotalPrice()+"Ôª"); // ¸üĞÂºÏ¼Æ¼Û¸ñ
+//                    totalPriceLable.setText("åˆè®¡ : "+getTotalPrice()+"å…ƒ"); // æ›´æ–°åˆè®¡ä»·æ ¼
 //                }
 //
 //                @Override
@@ -510,29 +518,29 @@
 //
 //
 //    /*
-//        setCenterPanelHeight ÉèÖÃÖĞ¼äÃæ°åµÄ¸ß¶È£ºÄÜ¹»¸ù¾İÍ¼Æ¬ÊıÁ¿£¬ÉèÖÃ»¬¶¯Ãæ°åµÄ¸ß¶È
-//            jscrollpaneWidth ÖĞ¼ä²ËÊ½¹ö¶¯Ãæ°å µ±Ç°µÄ¿í¶È
-//            imgNumber ²ËµÄÍ¼Æ¬ÊıÁ¿
-//            imageHeight Ã¿ÕÅÍ¼Æ¬µÄ¸ß¶È
+//        setCenterPanelHeight è®¾ç½®ä¸­é—´é¢æ¿çš„é«˜åº¦ï¼šèƒ½å¤Ÿæ ¹æ®å›¾ç‰‡æ•°é‡ï¼Œè®¾ç½®æ»‘åŠ¨é¢æ¿çš„é«˜åº¦
+//            jscrollpaneWidth ä¸­é—´èœå¼æ»šåŠ¨é¢æ¿ å½“å‰çš„å®½åº¦
+//            imgNumber èœçš„å›¾ç‰‡æ•°é‡
+//            imageHeight æ¯å¼ å›¾ç‰‡çš„é«˜åº¦
 //    */
 //    public static int setCenterPanelHeight(int jscrollpaneWidth,int imgNumber,int imageHeight){
 //        int basicValue=640;
 //        int basicRowsNumber=2;
-//        int rowsNumber=basicRowsNumber;// Ã¿ĞĞ´æ·ÅµÄÍ¼Æ¬ÊıÁ¿
-//        int addedValue=5;// µİÔöÖµ
+//        int rowsNumber=basicRowsNumber;// æ¯è¡Œå­˜æ”¾çš„å›¾ç‰‡æ•°é‡
+//        int addedValue=5;// é€’å¢å€¼
 //        if(jscrollpaneWidth>=basicValue){
-//            int testIceil= (int) Math.ceil((double)(jscrollpaneWidth-basicValue)/210); // È¡ÉÏÕûÊı
-//            int testIfloor= (int) Math.floor((double)(jscrollpaneWidth-basicValue)/210); // È¡ÏÂÕû
+//            int testIceil= (int) Math.ceil((double)(jscrollpaneWidth-basicValue)/210); // å–ä¸Šæ•´æ•°
+//            int testIfloor= (int) Math.floor((double)(jscrollpaneWidth-basicValue)/210); // å–ä¸‹æ•´
 //            rowsNumber=testIceil+basicRowsNumber;
-//            if((jscrollpaneWidth-basicValue)-210*testIfloor<testIceil*addedValue){ // ÌØÊâ´¦Àí
+//            if((jscrollpaneWidth-basicValue)-210*testIfloor<testIceil*addedValue){ // ç‰¹æ®Šå¤„ç†
 //                rowsNumber=rowsNumber-1;
 //            }
 //        }
-//        int columnNumber=imgNumber/rowsNumber;// Ã¿ÁĞ´æ·ÅµÄÍ¼Æ¬ÊıÁ¿
-//        if(imgNumber%rowsNumber!=0){ // ÈôÍ¼Æ¬Êı²»ÊÇrowsNumberµÄ±¶Êı£¬ÏÈ½«ÆäÉèÎªrowsNumberµÄ±¶Êı£¬ÔÙ¼ÆËãcolumnNumber
+//        int columnNumber=imgNumber/rowsNumber;// æ¯åˆ—å­˜æ”¾çš„å›¾ç‰‡æ•°é‡
+//        if(imgNumber%rowsNumber!=0){ // è‹¥å›¾ç‰‡æ•°ä¸æ˜¯rowsNumberçš„å€æ•°ï¼Œå…ˆå°†å…¶è®¾ä¸ºrowsNumberçš„å€æ•°ï¼Œå†è®¡ç®—columnNumber
 //            columnNumber=(int) Math.ceil((imgNumber+rowsNumber-imgNumber%rowsNumber)/rowsNumber);
 //        }
-//        int panelHeight=imageHeight*columnNumber; // ×îÖÕÒªÉèÖÃµÄÃæ°å¸ß¶È
+//        int panelHeight=imageHeight*columnNumber; // æœ€ç»ˆè¦è®¾ç½®çš„é¢æ¿é«˜åº¦
 //        return panelHeight+50;
 //    }
 //

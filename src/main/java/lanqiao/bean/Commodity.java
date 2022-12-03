@@ -8,20 +8,29 @@ package lanqiao.bean;
 public class Commodity {
     private int id;
     private String name;
-    private String sort;
     private int number;
     private double purchase;
     private double sell;
-    private String picAddress;
 
-    public Commodity(int id, String name, String sort, int number, double purchase, double sell, String picAddress) {
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    private String picAddress;
+    private String unit;
+
+    public Commodity(int id, String name, int number, double purchase, double sell) {
         this.id = id;
         this.name = name;
-        this.sort = sort;
         this.number = number;
         this.purchase = purchase;
         this.sell = sell;
         this.picAddress=picAddress;
+        this.unit=unit;
     }
 
     public String getPicAddress() {
@@ -46,14 +55,6 @@ public class Commodity {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSort() {
-        return sort;
-    }
-
-    public void setSort(String sort) {
-        this.sort = sort;
     }
 
     public int getNumber() {
@@ -85,7 +86,6 @@ public class Commodity {
         return "Commodity{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", sort='" + sort + '\'' +
                 ", number=" + number +
                 ", purchase=" + purchase +
                 ", sell=" + sell +

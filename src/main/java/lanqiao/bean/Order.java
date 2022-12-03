@@ -1,29 +1,36 @@
 package lanqiao.bean;
 
+import java.sql.Date;
+
 /**
  * @Author 钟荣钊
  * @Date 2022/12/02
  * @Version 1.0
  */
 public class Order {
-    private int OrderId;
+    private int id;
     private String commodity;
     private int number;
-    private double price;
+    private double purchase;
+    private double sell;
+    Date date;
 
-    public Order(int orderId, String commodity, int number, double price) {
-        OrderId = orderId;
+    public Order(int id, String commodity, int number, double purchase, double sell, Date date) {
+        this.id = id;
         this.commodity = commodity;
         this.number = number;
-        this.price = price;
+        this.purchase = purchase;
+        this.sell = sell;
+        this.date = date;
     }
 
-    public int getOrderId() {
-        return OrderId;
+
+    public int getId() {
+        return id;
     }
 
-    public void setOrderId(int orderId) {
-        OrderId = orderId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCommodity() {
@@ -42,21 +49,27 @@ public class Order {
         this.number = number;
     }
 
-    public double getPrice() {
-        return price;
+    public double getPurchase() {
+        return purchase;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPurchase(double purchase) {
+        this.purchase = purchase;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "OrderId=" + OrderId +
-                ", commodity='" + commodity + '\'' +
-                ", number=" + number +
-                ", price=" + price +
-                '}';
+    public double getSell() {
+        return sell;
+    }
+
+    public void setSell(double sell) {
+        this.sell = sell;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

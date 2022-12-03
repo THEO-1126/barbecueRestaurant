@@ -1,6 +1,7 @@
 package lanqiao.service.impl;
 
 import lanqiao.bean.Commodity;
+import lanqiao.bean.Order;
 import lanqiao.dao.CommodityDao;
 import lanqiao.dao.impl.CommodityDaoImpl;
 import lanqiao.service.CommodityService;
@@ -29,9 +30,9 @@ public class CommodityServiceImpl implements CommodityService {
     }
 
     @Override
-    public int getSortNumber(String sortName) throws SQLException {
+    public int getCommodityNumber() throws SQLException {
         try {
-            return commodityDao.getSortNumber(sortName);
+            return commodityDao.getCommodityNumber();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,19 +40,19 @@ public class CommodityServiceImpl implements CommodityService {
     }
 
     @Override
-    public Object[][] getSortpicAdress(String sortName) throws SQLException {
-        try {
-            return commodityDao.getSortpicAdress(sortName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public Object[][] getCommodityNameSellNumber() throws SQLException, IOException {
+        return commodityDao.getCommoditySellPurchaser();
+    }
+
+    @Override
+    public void updateCommoditynumber(Order[] orders) throws SQLException {
+        commodityDao.updateCommoditynumber(orders);
     }
 
     /*
        测试方法
    */
-    public static void main(String[] args) throws SQLException{
+    public static void main(String[] args) throws SQLException,IOException{
         CommodityService commodityService = new CommodityServiceImpl();
         System.out.println(commodityService.getAllCommodity());
     }

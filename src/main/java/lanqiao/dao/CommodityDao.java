@@ -1,6 +1,7 @@
 package lanqiao.dao;
 
 import lanqiao.bean.Commodity;
+import lanqiao.bean.Order;
 import lanqiao.bean.Users;
 
 import java.io.IOException;
@@ -18,8 +19,11 @@ public interface CommodityDao {
     List<Commodity> getAllCommodity() throws SQLException,IOException;
 
     /* sortName：商品类别名称 根据sortName计算各商品类别的数量 */
-    int getSortNumber(String sortName) throws SQLException, IOException;
+    int getCommodityNumber() throws SQLException, IOException;
 
-    /* 根据sortName商品类别，获取商品名字，单价，图片地址 */
-    Object[][] getSortpicAdress(String sortName) throws SQLException,IOException;
+    /* 根据sortName商品类别，获取商品名字,单价,售价*/
+    Object[][] getCommoditySellPurchaser() throws SQLException,IOException;
+
+    /* 更新commoditys表中的商品数量 减去已下单的数量*/
+    void updateCommoditynumber(Order []orders) throws SQLException;
 }
