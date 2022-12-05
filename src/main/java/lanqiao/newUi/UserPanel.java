@@ -1,4 +1,4 @@
-package lanqiao.ui;
+package lanqiao.newUi;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -10,15 +10,16 @@ import java.awt.*;
  * @Version 17.0.5
  */
 
-// 库存管理面板
-public class InventoryPanel {
+public class UserPanel extends JPanel {
+    // 用户管理面板
     public static JPanel init(){
-        JPanel inventoryPanel=new JPanel();
+        JPanel UserPanel=new JPanel();
         Color color1=new Color(51, 161, 201);
-        inventoryPanel.setBackground(color1);
         Font ChineseFont = new Font("宋体", Font.BOLD, 16);
-        inventoryPanel.setBounds(0,0,860,690);
-        inventoryPanel.setLayout(null);
+        UserPanel.setBackground(color1);
+        UserPanel.setBounds(0,0,860,690);
+        UserPanel.setLayout(null);
+
         JLabel usernameLable =new JLabel("搜索:");
         JTextField usernameField= new JTextField();
 
@@ -27,27 +28,27 @@ public class InventoryPanel {
         JButton button3= new JButton();
 
         button1.setText("text");
-        inventoryPanel.add(button1);
+        UserPanel.add(button1);
         button1.setBounds(770, 30, 80, 25);
         button2.setText("text");
-        inventoryPanel.add(button2);
+        UserPanel.add(button2);
         button2.setBounds(680, 30, 80, 25);
         button3.setText("text");
-        inventoryPanel.add(button3);
+        UserPanel.add(button3);
         button3.setBounds(590, 30, 80, 25);
 
         usernameLable.setBounds(250, 610, 50, 25);
         usernameLable.setFont(ChineseFont);
-        inventoryPanel.add(usernameLable);
+        UserPanel.add(usernameLable);
 
         usernameField.setBounds(300,610,200,25);
-        inventoryPanel.add(usernameField);
+        UserPanel.add(usernameField);
 
         JLabel jLabel=new JLabel();
         jLabel.setBounds(15,30,100,25);
-        jLabel.setText("库存管理界面");
+        jLabel.setText("用户管理界面");
         jLabel.setFont(ChineseFont);
-        inventoryPanel.add(jLabel);
+        UserPanel.add(jLabel);
         String head[] = {"id", "用户名", "密码"};
         Object[][] data = new Object[5][3];
 
@@ -64,7 +65,7 @@ public class InventoryPanel {
         r.setHorizontalAlignment(JLabel.CENTER);
         jTable.setDefaultRenderer(Object.class, r);// 每行内容居中显示
 
-        inventoryPanel.add(jscrollpane);
-        return inventoryPanel;
+        UserPanel.add(jscrollpane);
+        return UserPanel;
     }
 }

@@ -1,4 +1,4 @@
-package lanqiao.ui;
+package lanqiao.newUi;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;

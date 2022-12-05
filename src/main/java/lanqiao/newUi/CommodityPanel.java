@@ -1,4 +1,4 @@
-package lanqiao.ui;
+package lanqiao.newUi;
 
 import lanqiao.bean.Commodity;
 import lanqiao.bean.Order;
@@ -8,13 +8,9 @@ import lanqiao.service.impl.CommodityServiceImpl;
 import lanqiao.service.impl.OrderServiceImpl;
 
 import javax.swing.*;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;

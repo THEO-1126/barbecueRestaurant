@@ -2,12 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/ui/CommodityPanel.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/ui/InventoryPanel.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/ui/PurchasePanel.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/ui/StatsPanel.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/ui/UserPanel.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/ui/newMain.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/newUi/CommodityPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/newUi/InventoryPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/newUi/PurchasePanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/newUi/StatsPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/newUi/UserPanel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lanqiao/newUi/newMain.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/Assna.jpg" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/test/java/org/example/OrderMainUi.java" charset="UTF-8" />
